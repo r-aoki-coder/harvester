@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HARVESTER | Legend of Japanese Rice</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Noto+Sans+JP:wght@300;400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #C5A059;
+            --charcoal: #1A1A1A;
+            --cream: #F9F7F2;
+        }
+        body {
+            font-family: 'Montserrat', 'Noto Sans JP', sans-serif;
+            background-color: var(--cream);
+            color: var(--charcoal);
+            scroll-behavior: smooth;
+        }
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+        }
+        .hero-gradient {
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.5));
+        }
+        .gold-text { color: var(--gold); }
+        .bg-charcoal { background-color: var(--charcoal); }
+        
+        /* プレースホルダのスタイル */
+        .img-placeholder {
+            background: #e5e7eb;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .img-placeholder::after {
+            content: "Nature's Masterpiece";
+            color: rgba(0,0,0,0.1);
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 2rem;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 px-8 py-6 flex justify-between items-center mix-blend-difference text-white">
+        <div class="text-2xl font-bold tracking-widest uppercase">Harvester</div>
+        <div class="hidden md:flex space-x-12 text-sm tracking-widest uppercase">
+            <a href="#philosophy" class="hover:text-[--gold] transition">Philosophy</a>
+            <a href="#terroir" class="hover:text-[--gold] transition">The Land</a>
+            <a href="#products" class="hover:text-[--gold] transition">Collection</a>
+            <a href="#contact" class="hover:text-[--gold] transition">Inquiry</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden bg-gray-900">
+        <div class="absolute inset-0 z-0">
+            <!-- 田んぼの全景画像 (6F93468B...) -->
+            <img src="6F93468B-2923-4A0D-9A36-C24AB6A78E6C_1_105_c.jpeg" 
+                 alt="Panoramic view of the rice field" 
+                 onerror="this.parentElement.classList.add('img-placeholder')"
+                 class="w-full h-full object-cover">
+            <div class="absolute inset-0 hero-gradient"></div>
+        </div>
+        
+        <div class="relative z-10 text-center text-white px-4">
+            <span class="block mb-4 text-sm tracking-[0.4em] uppercase opacity-90">Legendary Japanese Grains</span>
+            <h1 class="text-6xl md:text-9xl mb-6 italic">Pure Heritage.</h1>
+            <p class="text-lg md:text-2xl font-light tracking-widest max-w-3xl mx-auto uppercase">
+                Cultivating the spirit of <span class="gold-text">Yamagata</span> for the world.
+            </p>
+        </div>
+    </section>
+
+    <!-- The Legend Section -->
+    <section id="philosophy" class="py-24 md:py-40 px-8 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-20 items-center">
+                <div class="reveal">
+                    <span class="gold-text text-sm font-bold tracking-widest uppercase mb-4 block">01. The Master</span>
+                    <h2 class="text-4xl md:text-6xl mb-8 leading-tight italic font-light text-gray-800">Known as the <br>"Legend of Rice."</h2>
+                    <p class="text-gray-600 leading-relaxed mb-6 text-lg">
+                        In the heart of Yamagata, one man’s dedication has rewritten the standards of quality. Our founder is recognized as a "Legend" in the pursuit of the perfect grain.
+                    </p>
+                    <div class="border-l-2 border-gold pl-6 py-2">
+                        <p class="text-gray-500 italic">"Every grain carries the warmth of the sun and the soul of the harvester."</p>
+                    </div>
+                </div>
+                <div class="reveal bg-gray-100 rounded-sm overflow-hidden shadow-xl">
+                    <!-- レジェンドポップの画像 (AFC39E2F...) -->
+                    <img src="AFC39E2F-1705-4404-837B-45A34EF43B23_1_105_c.jpg" 
+                         alt="Legend recognition in store" 
+                         onerror="this.parentElement.classList.add('img-placeholder')"
+                         class="w-full h-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Terroir Section -->
+    <section id="terroir" class="py-24 bg-charcoal text-white px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20 reveal">
+                <span class="gold-text text-sm font-bold tracking-widest uppercase mb-4 block">02. Terroir</span>
+                <h2 class="text-4xl md:text-6xl italic">The Gift of the Land</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 items-stretch">
+                <!-- 田植え画像 (A156D130...) -->
+                <div class="reveal relative overflow-hidden h-[500px] bg-gray-800">
+                    <img src="A156D130-CB0D-4016-B354-8EC053D51779_1_105_c.jpeg" 
+                         alt="Spring water reflecting the sky" 
+                         onerror="this.parentElement.classList.add('img-placeholder')"
+                         class="w-full h-full object-cover opacity-80">
+                    <div class="absolute bottom-0 left-0 p-8 bg-gradient-to-t from-black/80 to-transparent w-full">
+                        <h3 class="text-2xl mb-2">Crystal Waters</h3>
+                        <p class="text-sm text-gray-400">Pure meltwater from Yamagata's peaks feeds our soil, creating a mineral-rich foundation.</p>
+                    </div>
+                </div>
+                <!-- 稲のアップ画像 (4996EE4D...) -->
+                <div class="reveal relative overflow-hidden h-[500px] bg-gray-800">
+                    <img src="4996EE4D-BD06-43A4-901F-5CFBEB566F66_1_105_c.jpg" 
+                         alt="Young rice plants growing strong" 
+                         onerror="this.parentElement.classList.add('img-placeholder')"
+                         class="w-full h-full object-cover opacity-80">
+                    <div class="absolute bottom-0 left-0 p-8 bg-gradient-to-t from-black/80 to-transparent w-full">
+                        <h3 class="text-2xl mb-2">Sustainable Vitality</h3>
+                        <p class="text-sm text-gray-400 italic">Respecting the cycle of nature to ensure every grain is packed with life.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Collection Section -->
+    <section id="products" class="py-24 px-8 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16 reveal">
+                <span class="gold-text text-sm font-bold tracking-widest uppercase mb-4 block">03. The Collection</span>
+                <h2 class="text-4xl md:text-6xl italic">Signature Varietals</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- つや姫 -->
+                <div class="bg-[#F9F7F2] p-10 reveal">
+                    <div class="h-64 mb-8 bg-white flex items-center justify-center overflow-hidden">
+                         <img src="AFC39E2F-1705-4404-837B-45A34EF43B23_1_105_c.jpg" 
+                              alt="Tsuyahime package" 
+                              onerror="this.parentElement.classList.add('img-placeholder')"
+                              class="h-full object-contain">
+                    </div>
+                    <div class="text-center">
+                        <h3 class="text-3xl mb-2">Tsuyahime</h3>
+                        <p class="text-xs uppercase gold-text font-bold mb-4 tracking-widest">Glossy & Sweet</p>
+                        <p class="text-gray-600 text-sm leading-relaxed">A premium rice loved for its sweetness and beautiful shine. The jewel of Yamagata.</p>
+                    </div>
+                </div>
+                
+                <!-- 雪若丸 -->
+                <div class="bg-[#F9F7F2] p-10 reveal">
+                    <div class="h-64 mb-8 bg-white flex items-center justify-center overflow-hidden">
+                        <img src="AFC39E2F-1705-4404-837B-45A34EF43B23_1_105_c.jpg" 
+                             alt="Yukiwakamaru package" 
+                             onerror="this.parentElement.classList.add('img-placeholder')"
+                             class="h-full object-contain">
+                    </div>
+                    <div class="text-center">
+                        <h3 class="text-3xl mb-2">Yukiwakamaru</h3>
+                        <p class="text-xs uppercase gold-text font-bold mb-4 tracking-widest">Bold & Firm</p>
+                        <p class="text-gray-600 text-sm leading-relaxed">Characterized by a substantial grain and excellent bite. Ideal for gourmet cuisine.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-charcoal text-white py-24 px-8 border-t border-gray-900">
+        <div class="max-w-4xl mx-auto text-center reveal">
+            <h2 class="text-4xl md:text-6xl mb-8 italic">Exporting Excellence</h2>
+            <p class="text-gray-400 mb-12 text-lg">
+                Available for international distribution to luxury retailers and Michelin-starred kitchens.
+            </p>
+            <a href="mailto:contact@harvester.jp" class="inline-block border border-gold text-gold px-12 py-5 uppercase tracking-[0.3em] text-xs font-bold hover:bg-gold hover:text-white transition duration-500">
+                Global Inquiry
+            </a>
+            <div class="mt-20 text-[10px] tracking-[0.4em] text-gray-600 uppercase">
+                &copy; Harvester Japan | The Art of Rice
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                if (elementTop < windowHeight - 100) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+        window.addEventListener("scroll", reveal);
+        window.onload = reveal;
+    </script>
+</body>
+</html>
